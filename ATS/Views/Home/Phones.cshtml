@@ -1,0 +1,21 @@
+﻿@model List<Phone>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Модель телефона</th>
+            <th>Номер телефона</th>
+            <th>Владелец</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var phone in Model)
+        {
+            <tr>
+                <td>@phone.PhoneModel</td>
+                <td>@phone.PhoneNumber</td>
+                <td>@phone.Subscriber.Surname @phone.Subscriber.Name @phone.Subscriber.Patronymic</td>
+            </tr>
+        }
+    </tbody>
+</table>

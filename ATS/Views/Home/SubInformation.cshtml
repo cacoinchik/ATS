@@ -1,0 +1,59 @@
+﻿@model Subscriber
+
+<h2>Данные о пользователе</h2>
+
+<p>ФИО: @Model.Surname @Model.Name @Model.Patronymic</p>
+<p>Почтовый адрес: @Model.Email</p>
+
+<h3>Данные о телефонах пользователя</h3>
+@if (Model.Phones.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Модель телефона</th>
+                <th>Номер телефона</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var phone in Model.Phones)
+            {
+                <tr>
+                    <td>@phone.PhoneModel</td>
+                    <td>@phone.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Информация отсутствует</p>
+}
+
+<h3>Данные о задолженностях</h3>
+@if (Model.Debts.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Сумма задолженности</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var deb in Model.Debts)
+            {
+                <tr>
+                    <td>@deb.Name</td>
+                    <td>@deb.Amount рублей</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Информация отсутствует</p>
+
+}

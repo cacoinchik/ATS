@@ -1,0 +1,25 @@
+﻿@model List<Subscriber>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Почтовый адрес</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sub in Model)
+        {
+            <tr>
+                <td>@sub.Surname</td>
+                <td>@sub.Name</td>
+                <td>@sub.Patronymic</td>
+                <td>@sub.Email</td>
+                <td><a asp-controller="Home" asp-action="SubInformation" asp-route-id="@sub.Id">Подробнее</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

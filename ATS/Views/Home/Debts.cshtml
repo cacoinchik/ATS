@@ -1,0 +1,21 @@
+﻿@model List<Debts>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Сумма задолженности</th>
+            <th>Владелец</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var deb in Model)
+        {
+            <tr>
+                <td>@deb.Name</td>
+                <td>@deb.Amount рублей</td>
+                <td>@deb.Subscriber.Surname @deb.Subscriber.Name @deb.Subscriber.Patronymic</td>
+            </tr>
+        }
+    </tbody>
+</table>
