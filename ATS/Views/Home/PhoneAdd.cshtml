@@ -1,0 +1,19 @@
+﻿@model PhoneAddVM
+
+<form method="post" asp-controller="Home" asp-action="PhoneAdd">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="SubscriberId"/>
+
+    <label>Модель телефона</label>
+    <input asp-for="PhoneModel"/>
+    <span asp-validation-for="PhoneModel"></span>
+    <br />
+
+    <label>Номер телефона</label>
+    <input asp-for="PhoneNumber"/>
+    <span asp-validation-for="PhoneNumber"></span>
+    <br />
+
+    <input type="submit" value="Сохранить" />
+</form>

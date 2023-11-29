@@ -30,6 +30,7 @@ else
 {
     <p>Информация отсутствует</p>
 }
+<a asp-controller="Home" asp-action="PhoneAdd" asp-route-id="@Model.Id">Добавить новый телефон</a>
 
 <h3>Данные о задолженностях</h3>
 @if (Model.Debts.Count > 0)
@@ -57,3 +58,4 @@ else
     <p>Информация отсутствует</p>
 
 }
+<a asp-controller="Home" asp-action="DebAdd" asp-route-id="@Model.Id">Добавить новую задолженность</a>

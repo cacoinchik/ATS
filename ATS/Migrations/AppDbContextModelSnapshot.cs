@@ -43,7 +43,7 @@ namespace ATS.Migrations
 
                     b.HasIndex("SubscriberId");
 
-                    b.ToTable("Debts");
+                    b.ToTable("Debts", (string)null);
                 });
 
             modelBuilder.Entity("ATS.Models.Phone", b =>
@@ -69,7 +69,7 @@ namespace ATS.Migrations
 
                     b.HasIndex("SubscriberId");
 
-                    b.ToTable("Phones");
+                    b.ToTable("Phones", (string)null);
                 });
 
             modelBuilder.Entity("ATS.Models.Subscriber", b =>
@@ -98,7 +98,7 @@ namespace ATS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Subscribers");
+                    b.ToTable("Subscribers", (string)null);
                 });
 
             modelBuilder.Entity("ATS.Models.Debts", b =>

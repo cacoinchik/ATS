@@ -1,0 +1,19 @@
+﻿@model DebtsAddVM
+
+<form method="post" asp-controller="Home" asp-action="DebAdd">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="SubscriberId"/>
+
+    <label>Навзание</label>
+    <input asp-for="Name"/>
+    <span asp-validation-for="Name"></span>
+    <br />
+
+    <label>Сумма долга</label>
+    <input asp-for="Amount"/>
+    <span asp-validation-for="Amount"></span>
+    <br />
+
+    <input type="submit" value="Сохранить" />
+</form>

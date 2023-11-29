@@ -1,0 +1,27 @@
+﻿@model SubscriberAddVM
+
+<form method="post" asp-controller="Home" asp-action="SubAdd">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <label>Фамилия</label>
+    <input asp-for="Surname"/>
+    <span asp-validation-for="Surname"></span>
+    <br />
+
+    <label>Имя</label>
+    <input asp-for="Name"/>
+    <span asp-validation-for="Name"></span>
+    <br />
+
+    <label>Отчество</label>
+    <input asp-for="Patronymic"/>
+    <span asp-validation-for="Patronymic"></span>
+    <br />
+
+    <label>Почтовый адрес</label>
+    <input asp-for="Email"/>
+    <span asp-validation-for="Email"></span>
+    <br />
+
+    <input type="submit" value="Сохранить"/>
+</form>
